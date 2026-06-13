@@ -1,0 +1,21 @@
+name: ReportChat
+version: ${project.version}
+main: io.github.sunglogbag81.reportchat.ReportChatPlugin
+api-version: '1.21'
+author: sunglogbag81
+description: Report command with admin notification and forced private report chats.
+commands:
+  report:
+    description: Send a report to configured admins.
+    usage: /report [message]
+  reportchat:
+    description: Manage report private chats.
+    usage: /reportchat <open|invite|kick|close|list|leave|reload>
+    aliases: [rc]
+permissions:
+  report.admin:
+    description: Receive reports and manage report chats.
+    default: op
+  report.reload:
+    description: Reload ReportChat configuration.
+    default: op

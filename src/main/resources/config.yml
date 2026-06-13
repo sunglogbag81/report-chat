@@ -1,0 +1,28 @@
+# Users listed here receive /report notifications and can manage report chats.
+# Entries may be player names or UUIDs. Permission report.admin also grants admin access.
+admins:
+  - "Gamparda"
+
+# If true, online OP players also receive report notifications and admin powers.
+notify-op: true
+
+permissions:
+  admin-node: "report.admin"
+  reload-node: "report.reload"
+
+sounds:
+  enabled: true
+  report-received: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  private-chat-created: "BLOCK_NOTE_BLOCK_PLING"
+  chat-message: "UI_BUTTON_CLICK"
+
+report:
+  cooldown-seconds: 30
+  allow-empty-report: true
+
+private-chat:
+  # Recommended: one active report chat per participant to avoid routing ambiguity.
+  one-active-chat-per-player: true
+  auto-timeout-minutes: 30
+  log-to-console: true
+  prefix: "&8[&cReportChat&8]"
