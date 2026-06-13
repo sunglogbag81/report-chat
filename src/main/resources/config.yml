@@ -1,9 +1,9 @@
-# Users listed here receive /report notifications and can manage report chats.
-# Entries may be player names or UUIDs. Permission report.admin also grants admin access.
+# 이 목록에 있는 플레이어는 /report 알림을 받고 신고 상담 채팅을 관리할 수 있습니다.
+# 플레이어 이름 또는 UUID를 입력할 수 있습니다. report.admin 권한도 관리자 권한을 부여합니다.
 admins:
   - "Gamparda"
 
-# If true, online OP players also receive report notifications and admin powers.
+# true이면 온라인 OP도 신고 알림을 받고 관리자 권한을 가집니다.
 notify-op: true
 
 permissions:
@@ -12,17 +12,24 @@ permissions:
 
 sounds:
   enabled: true
+  # 신고가 관리자에게 도착했을 때 재생할 소리
   report-received: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  # 개인 상담 채팅이 생성되었을 때 재생할 소리
   private-chat-created: "BLOCK_NOTE_BLOCK_PLING"
+  # 상담 채팅 메시지가 도착했을 때 재생할 소리
   chat-message: "UI_BUTTON_CLICK"
 
 report:
+  # 신고 도배 방지 쿨다운. 0이면 비활성화됩니다.
   cooldown-seconds: 30
+  # true이면 /report 뒤에 내용이 없어도 신고가 접수됩니다.
   allow-empty-report: true
 
 private-chat:
-  # Recommended: one active report chat per participant to avoid routing ambiguity.
+  # 채팅 라우팅 충돌을 피하기 위해 플레이어당 활성 상담 채팅 하나만 허용합니다.
   one-active-chat-per-player: true
+  # 이 시간 동안 대화가 없으면 상담 채팅을 자동 종료합니다. 0이면 비활성화됩니다.
   auto-timeout-minutes: 30
+  # 관리자 초대/내보내기/종료 같은 관리 행동을 콘솔에 남깁니다.
   log-to-console: true
-  prefix: "&8[&cReportChat&8]"
+  prefix: "&8[&c신고상담&8]"

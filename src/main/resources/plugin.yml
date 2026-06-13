@@ -3,19 +3,19 @@ version: ${project.version}
 main: io.github.sunglogbag81.reportchat.ReportChatPlugin
 api-version: '1.21'
 author: sunglogbag81
-description: Report command with admin notification and forced private report chats.
+description: 신고 명령어와 관리자 전용 개인 상담 채팅을 제공하는 플러그인입니다.
 commands:
   report:
-    description: Send a report to configured admins.
-    usage: /report [message]
+    description: 관리자에게 신고를 보냅니다.
+    usage: /report [내용]
   reportchat:
-    description: Manage report private chats.
+    description: 신고 상담 채팅을 관리합니다.
     usage: /reportchat <open|invite|kick|close|list|leave|reload>
     aliases: [rc]
 permissions:
   report.admin:
-    description: Receive reports and manage report chats.
+    description: 신고를 받고 상담 채팅을 관리합니다.
     default: op
   report.reload:
-    description: Reload ReportChat configuration.
+    description: ReportChat 설정을 다시 불러옵니다.
     default: op
